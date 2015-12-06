@@ -4,8 +4,9 @@
 
 ###Supervised and Unsupervised Learning
  Supervised learning is done with a data set outcome is provided initially as "priors".  examples are given weather in the month of July, predict the weather in June.  Given the clinical data of 67 patients who have had prostate cancer, measure the presence of an anti-gen in the clinical data to predict a random patient.  Unsupervised learning deals with clustering, or grouping data without knowledge of the correct type of category; i.e.  a boundary between two groups, but one doesn't know the difference between the two groups, only that they are clustered.  
-    Unsupervised learning is given a genomic data of a person, predict if they have diabetes, this is unsupervised because you only have their data sequences, not the outcome of previous diabetes sequence data.  
-###Regression and Classification problems
+    Unsupervised learning is given a genomic data of a person, predict if they have diabetes, this is unsupervised because you only have their data sequences, not the outcome of previous diabetes sequence data.     
+
+##Regression and Classification problems    
  Regression is usually a numeric value that is predicted, or evaluated typically a scalar.  Y=T(X), where Y is a value.  
  Classication problems is a sorting problem not with a numeric value but a description of predicting of a type, or classication;  predicting a set of Rainy, Snowy, or Sunny.  Prediction win or loss.  
  For Regression problems, the goal is to predict onto a *continuous* expected result funciton.  
@@ -14,3 +15,30 @@ The cost function is a fancy form of an average aimed at showing how well the hy
  where $\bar{x} = (h(x^{i}) - y^{i})^{2}$
  defined as the mean of the squares difference of the predicted function
  $h$ and the response y defined as the mean of the squares difference of the predicted function $h$ and the response y.
+ the hypothesis function : $h_{\theta}(x)=\theta_{o} +\theta_{1}x$    
+ the cost function $J(\theta_{0},\theta_{1}) = \frac{1}{2m}\sum_{i=1}^{m} ( h(x^{i}) - y^{i})^{2}$    
+
+Note that the cost function is a two parameter function, it is a function of the parameters of the hypothesis function
+The cost function is the mean square error.
+
+## Gradient Descent   
+If we plot $\theta_{0}$ on the x axis, $\theta_{1}$ on the z axis and $J(\theta_{0},\theta_{1})$ on the y axis we have the results of our cost function using our hypothesis with specific parameters.   
+  The cost function $J$ is at its best when it reaches the local minimum; the local miminum is calculated using derivatives.   
+
+The learning rate $\alpha=\frac{d}{d\theta}J(\theta_{0},\theta_{1})$ is the derivative of the cost function $J(\theta_{0},\theta_{1})$.   When the learning rate converges we have found the optimal solution.   
+
+$\theta_{j} = \theta_{j} - \alpha \frac{d}{d\theta_{j}}J(\theta_{0},\theta_{1})$ 
+
+   
+##Gradient Descent For Linear Regression   
+Repeat Loop until convergence : 
+$\theta_{0} = \theta_{0} - \alpha\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{i}-y^{i}))$   
+
+$\theta_{1} = \theta_{1} - \alpha\frac{1}{m}\sum_{i=1}^{m}( (h_{\theta}(x^{i}) -y^{i})x^{i})$   
+
+  
+where m is the size of the training set, $\theta_{0}$ a constant changing along $\theta_{1}, x^{i}, y^{i}$   where x,y are the input and response of the training set.   
+
+This is for a single variable regression.
+
+
