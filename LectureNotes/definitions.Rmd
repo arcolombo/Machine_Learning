@@ -8,4 +8,6 @@
 ###Regression and Classification problems
  Regression is usually a numeric value that is predicted, or evaluated typically a scalar.  Y=T(X), where Y is a value.  
  Classication problems is a sorting problem not with a numeric value but a description of predicting of a type, or classication;  predicting a set of Rainy, Snowy, or Sunny.  Prediction win or loss.  
+ For Regression problems, the goal is to predict onto a *continuous* expected result funciton.  
 
+The cost function is a fancy form of an average aimed at showing how well the hypothesis function performed over the supervised outcome test data.  the cost is equal to $\frac{1}{2} \bar{x}$ where $\bar{x} = (h(x^{i}) - y^{i})^{2}$ defined as the mean of the squares difference of the predicted function $h$ and the response y defined as the mean of the squares difference of the predicted function $h$ and the response y.
