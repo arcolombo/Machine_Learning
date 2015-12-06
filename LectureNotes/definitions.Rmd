@@ -1,0 +1,11 @@
+#Definition list for Andrew Ng's ML course on Coursera
+##Week 1 Introduction to ML and Linear Algebra
+  The first week touched upon supervised learning, unsupervised learning, regression, classification problems
+
+###Supervised and Unsupervised Learning
+ Supervised learning is done with a data set outcome is provided initially as "priors".  examples are given weather in the month of July, predict the weather in June.  Given the clinical data of 67 patients who have had prostate cancer, measure the presence of an anti-gen in the clinical data to predict a random patient.  Unsupervised learning deals with clustering, or grouping data without knowledge of the correct type of category; i.e.  a boundary between two groups, but one doesn't know the difference between the two groups, only that they are clustered.  
+    Unsupervised learning is given a genomic data of a person, predict if they have diabetes, this is unsupervised because you only have their data sequences, not the outcome of previous diabetes sequence data.  
+###Regression and Classification problems
+ Regression is usually a numeric value that is predicted, or evaluated typically a scalar.  Y=T(X), where Y is a value.  
+ Classication problems is a sorting problem not with a numeric value but a description of predicting of a type, or classication;  predicting a set of Rainy, Snowy, or Sunny.  Prediction win or loss.  
+
